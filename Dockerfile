@@ -1,6 +1,6 @@
 # Version: 0.0.1
 FROM ubuntu:14.04
-MAINTAINER Yar Kravtsov <yarlson@gm>
+MAINTAINER Yar Kravtsov <yarlson@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -15,6 +15,7 @@ RUN ln -s /usr/include/freetype2 /usr/local/include/freetype
 
 RUN easy_install pip
 
+RUN pip install PIL --allow-external PIL --allow-unverified PIL
 RUN pip install scikit-image cropy
 
 ENV DEBIAN_FRONTEND newt
