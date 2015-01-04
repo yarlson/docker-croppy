@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 MAINTAINER Yar Kravtsov <yarlson@gm>
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 RUN apt-get install build-essential libfreetype6-dev libjpeg-dev liblcms1-dev libpq-dev python-dev python-scipy python-setuptools python2.7-dev uwsgi uwsgi-plugin-python zlib1g-dev -y
@@ -17,4 +17,4 @@ RUN easy_install pip
 
 RUN pip install scikit-image cropy
 
-ENV DEBIAN_FRONTEND=newt
+ENV DEBIAN_FRONTEND newt
